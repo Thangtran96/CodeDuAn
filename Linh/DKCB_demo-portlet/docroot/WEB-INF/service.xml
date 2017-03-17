@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.dkcb">
+	<author>hoang_000</author>
+	<namespace>u</namespace>
+
+	<entity name="DKCB" local-service="true" remote-service="true">
+
+		<column name="Id" type="long" primary="true" id-type="identity"/>
+		<column name="Hoten" type="String"/>
+		<column name="Diachi" type="String" />
+		<column name="Gioitinh" type="boolean" />
+		<column name="Sodienthoai" type="String" />
+		<column name="Ngaysinh" type="Date" />
+        <column name="Trieuchung" type="String" />		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="Id" />
+		</order>
+		</entity>
+	
+    <entity name="Bacsi" local-service="true" remote-service="true">
+        <column name="Idbacsi" type="String" primary="true"></column>
+        <column name="TenBS" type="String"></column>
+        <column name="Idphongkham" type="String"></column>
+    </entity>
+    
+    <entity name="Lichkham" local-service="true" remote-service="true">
+   
+        <column name="Idbacsi" type="String" primary="false"></column>
+        <column name="Id" type="long"></column>
+        <column name="Idphongkham" type="String"></column>
+        <column name="Iddichvu" type="long"></column>
+        <column name="Giodukien" type="String"></column>
+        <column name="Ngaykham" type="Date"></column>
+        <column name="Idlichkham" type="int" primary="true" id-type="identity"></column>
+    </entity>
+    
+    <entity name="Phongkham" local-service="true" remote-service="true">
+		<!-- Audit fields -->
+        <column name="Idphongkham" type="String" primary="true"></column>
+        <column name="TenPK" type="String"></column>
+	</entity>
+	<entity name="Dichvu" local-service="true" remote-service="true">
+		<!-- Audit fields -->
+        <column name="Iddichvu" type="long" primary="true" id-type="identity"></column>
+        <column name="Tendichvu" type="String"></column>
+        <column name="Mucthu" type="double"></column>
+        <column name="Ghichi" type="String"></column>
+        <column name="Idphongkham" type="String"></column>
+	</entity>
+
+</service-builder>

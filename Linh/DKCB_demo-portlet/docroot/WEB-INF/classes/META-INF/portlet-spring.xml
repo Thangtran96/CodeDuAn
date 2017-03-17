@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.dkcb.service.BacsiLocalService" class="com.dkcb.service.impl.BacsiLocalServiceImpl" />
+	<bean id="com.dkcb.service.BacsiService" class="com.dkcb.service.impl.BacsiServiceImpl" />
+	<bean id="com.dkcb.service.persistence.BacsiPersistence" class="com.dkcb.service.persistence.BacsiPersistenceImpl" parent="basePersistence" />
+	<bean id="com.dkcb.service.DichvuLocalService" class="com.dkcb.service.impl.DichvuLocalServiceImpl" />
+	<bean id="com.dkcb.service.DichvuService" class="com.dkcb.service.impl.DichvuServiceImpl" />
+	<bean id="com.dkcb.service.persistence.DichvuPersistence" class="com.dkcb.service.persistence.DichvuPersistenceImpl" parent="basePersistence" />
+	<bean id="com.dkcb.service.DKCBLocalService" class="com.dkcb.service.impl.DKCBLocalServiceImpl" />
+	<bean id="com.dkcb.service.DKCBService" class="com.dkcb.service.impl.DKCBServiceImpl" />
+	<bean id="com.dkcb.service.persistence.DKCBPersistence" class="com.dkcb.service.persistence.DKCBPersistenceImpl" parent="basePersistence" />
+	<bean id="com.dkcb.service.LichkhamLocalService" class="com.dkcb.service.impl.LichkhamLocalServiceImpl" />
+	<bean id="com.dkcb.service.LichkhamService" class="com.dkcb.service.impl.LichkhamServiceImpl" />
+	<bean id="com.dkcb.service.persistence.LichkhamPersistence" class="com.dkcb.service.persistence.LichkhamPersistenceImpl" parent="basePersistence" />
+	<bean id="com.dkcb.service.PhongkhamLocalService" class="com.dkcb.service.impl.PhongkhamLocalServiceImpl" />
+	<bean id="com.dkcb.service.PhongkhamService" class="com.dkcb.service.impl.PhongkhamServiceImpl" />
+	<bean id="com.dkcb.service.persistence.PhongkhamPersistence" class="com.dkcb.service.persistence.PhongkhamPersistenceImpl" parent="basePersistence" />
+</beans>

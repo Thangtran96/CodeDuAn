@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.dkcb.model.Bacsi" />
+	<import class="com.dkcb.model.Dichvu" />
+	<import class="com.dkcb.model.DKCB" />
+	<import class="com.dkcb.model.Lichkham" />
+	<import class="com.dkcb.model.Phongkham" />
+	<class name="com.dkcb.model.impl.BacsiImpl" table="u_Bacsi">
+		<cache usage="read-write" />
+		<id name="Idbacsi" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="TenBS" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Idphongkham" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.dkcb.model.impl.DichvuImpl" table="u_Dichvu">
+		<cache usage="read-write" />
+		<id name="Iddichvu" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="Tendichvu" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Mucthu" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="Ghichi" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Idphongkham" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.dkcb.model.impl.DKCBImpl" table="u_DKCB">
+		<cache usage="read-write" />
+		<id name="Id" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="Hoten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Diachi" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Gioitinh" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="Sodienthoai" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Ngaysinh" type="org.hibernate.type.TimestampType" />
+		<property name="Trieuchung" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.dkcb.model.impl.LichkhamImpl" table="u_Lichkham">
+		<cache usage="read-write" />
+		<id name="Idlichkham" type="int">
+			<generator class="identity" />
+		</id>
+		<property name="Idbacsi" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Id" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="Idphongkham" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Iddichvu" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="Giodukien" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Ngaykham" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.dkcb.model.impl.PhongkhamImpl" table="u_Phongkham">
+		<cache usage="read-write" />
+		<id name="Idphongkham" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="TenPK" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

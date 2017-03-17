@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.dkcb.model.impl.BacsiModelImpl">
+		<attributes>
+			<id name="Idbacsi" />
+			<basic name="TenBS" />
+			<basic name="Idphongkham" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.dkcb.model.impl.DichvuModelImpl">
+		<attributes>
+			<id name="Iddichvu" />
+			<basic name="Tendichvu" />
+			<basic name="Mucthu" />
+			<basic name="Ghichi" />
+			<basic name="Idphongkham" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.dkcb.model.impl.DKCBModelImpl">
+		<attributes>
+			<id name="Id" />
+			<basic name="Hoten" />
+			<basic name="Diachi" />
+			<basic name="Gioitinh" />
+			<basic name="Sodienthoai" />
+			<basic name="Ngaysinh">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="Trieuchung" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.dkcb.model.impl.LichkhamModelImpl">
+		<attributes>
+			<id name="Idlichkham" />
+			<basic name="Idbacsi" />
+			<basic name="Id" />
+			<basic name="Idphongkham" />
+			<basic name="Iddichvu" />
+			<basic name="Giodukien" />
+			<basic name="Ngaykham">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.dkcb.model.impl.PhongkhamModelImpl">
+		<attributes>
+			<id name="Idphongkham" />
+			<basic name="TenPK" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.dkcb.model.impl.BacsiImpl" name="Bacsi">
+		<table name="u_Bacsi" />
+		<attributes />
+	</entity>
+	<entity class="com.dkcb.model.impl.DichvuImpl" name="Dichvu">
+		<table name="u_Dichvu" />
+		<attributes />
+	</entity>
+	<entity class="com.dkcb.model.impl.DKCBImpl" name="DKCB">
+		<table name="u_DKCB" />
+		<attributes />
+	</entity>
+	<entity class="com.dkcb.model.impl.LichkhamImpl" name="Lichkham">
+		<table name="u_Lichkham" />
+		<attributes />
+	</entity>
+	<entity class="com.dkcb.model.impl.PhongkhamImpl" name="Phongkham">
+		<table name="u_Phongkham" />
+		<attributes />
+	</entity>
+</entity-mappings>

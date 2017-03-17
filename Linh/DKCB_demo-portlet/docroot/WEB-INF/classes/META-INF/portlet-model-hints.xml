@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.dkcb.model.Bacsi">
+		<field name="Idbacsi" type="String" />
+		<field name="TenBS" type="String" />
+		<field name="Idphongkham" type="String" />
+	</model>
+	<model name="com.dkcb.model.Dichvu">
+		<field name="Iddichvu" type="long" />
+		<field name="Tendichvu" type="String" />
+		<field name="Mucthu" type="double" />
+		<field name="Ghichi" type="String" />
+		<field name="Idphongkham" type="String" />
+	</model>
+	<model name="com.dkcb.model.DKCB">
+		<field name="Id" type="long" />
+		<field name="Hoten" type="String" />
+		<field name="Diachi" type="String" />
+		<field name="Gioitinh" type="boolean" />
+		<field name="Sodienthoai" type="String" />
+		<field name="Ngaysinh" type="Date" />
+		<field name="Trieuchung" type="String" />
+	</model>
+	<model name="com.dkcb.model.Lichkham">
+		<field name="Idbacsi" type="String" />
+		<field name="Id" type="long" />
+		<field name="Idphongkham" type="String" />
+		<field name="Iddichvu" type="long" />
+		<field name="Giodukien" type="String" />
+		<field name="Ngaykham" type="Date" />
+		<field name="Idlichkham" type="int" />
+	</model>
+	<model name="com.dkcb.model.Phongkham">
+		<field name="Idphongkham" type="String" />
+		<field name="TenPK" type="String" />
+	</model>
+</model-hints>
