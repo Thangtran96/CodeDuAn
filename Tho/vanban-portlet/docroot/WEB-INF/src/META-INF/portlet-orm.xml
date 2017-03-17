@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.vanban.model.impl.LoaiVBModelImpl">
+		<attributes>
+			<id name="loaiId" />
+			<basic name="tenloai" />
+			<basic name="ghichu" />
+			<basic name="tinhtrang" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.vanban.model.impl.nguoidungModelImpl">
+		<attributes>
+			<id name="userId" />
+			<basic name="hoten" />
+			<basic name="ngaysinh">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="gioitinh" />
+			<basic name="diachi" />
+			<basic name="sdt" />
+			<basic name="donvi" />
+			<basic name="mail" />
+			<basic name="matkhau" />
+			<basic name="tinhtrang" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.vanban.model.impl.nguoikiModelImpl">
+		<attributes>
+			<id name="nguoikiID" />
+			<basic name="hoten" />
+			<basic name="ngaysinh">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="gioitinh" />
+			<basic name="donvi" />
+			<basic name="chucvu" />
+			<basic name="tinhtrang" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.vanban.model.impl.noiBanHanhModelImpl">
+		<attributes>
+			<id name="noiBHId" />
+			<basic name="tennoibanhanh" />
+			<basic name="ghichu" />
+			<basic name="tinhtrang" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.vanban.model.impl.vanbanModelImpl">
+		<attributes>
+			<id name="vanbanId" />
+			<basic name="kihieu" />
+			<basic name="trichyeu" />
+			<basic name="ngaybanhanh">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ngaytao">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="nguoikiID" />
+			<basic name="userID" />
+			<basic name="loaiID" />
+			<basic name="noiBHID" />
+			<basic name="tinhtrang" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.vanban.model.impl.LoaiVBImpl" name="LoaiVB">
+		<table name="vanban_LoaiVB" />
+		<attributes />
+	</entity>
+	<entity class="com.vanban.model.impl.nguoidungImpl" name="nguoidung">
+		<table name="vanban_nguoidung" />
+		<attributes />
+	</entity>
+	<entity class="com.vanban.model.impl.nguoikiImpl" name="nguoiki">
+		<table name="vanban_nguoiki" />
+		<attributes />
+	</entity>
+	<entity class="com.vanban.model.impl.noiBanHanhImpl" name="noiBanHanh">
+		<table name="vanban_noiBanHanh" />
+		<attributes />
+	</entity>
+	<entity class="com.vanban.model.impl.vanbanImpl" name="vanban">
+		<table name="vanban_vanban" />
+		<attributes />
+	</entity>
+</entity-mappings>

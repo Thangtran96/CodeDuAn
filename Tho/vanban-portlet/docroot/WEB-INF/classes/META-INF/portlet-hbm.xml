@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.vanban.model.LoaiVB" />
+	<import class="com.vanban.model.nguoidung" />
+	<import class="com.vanban.model.nguoiki" />
+	<import class="com.vanban.model.noiBanHanh" />
+	<import class="com.vanban.model.vanban" />
+	<class name="com.vanban.model.impl.LoaiVBImpl" table="vanban_LoaiVB">
+		<cache usage="read-write" />
+		<id name="loaiId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="tenloai" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ghichu" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="tinhtrang" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="com.vanban.model.impl.nguoidungImpl" table="vanban_nguoidung">
+		<cache usage="read-write" />
+		<id name="userId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="hoten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ngaysinh" type="org.hibernate.type.TimestampType" />
+		<property name="gioitinh" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="diachi" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="sdt" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="donvi" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="mail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="matkhau" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="tinhtrang" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="com.vanban.model.impl.nguoikiImpl" table="vanban_nguoiki">
+		<cache usage="read-write" />
+		<id name="nguoikiID" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="hoten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ngaysinh" type="org.hibernate.type.TimestampType" />
+		<property name="gioitinh" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="donvi" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="chucvu" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="tinhtrang" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="com.vanban.model.impl.noiBanHanhImpl" table="vanban_noiBanHanh">
+		<cache usage="read-write" />
+		<id name="noiBHId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="tennoibanhanh" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ghichu" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="tinhtrang" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="com.vanban.model.impl.vanbanImpl" table="vanban_vanban">
+		<cache usage="read-write" />
+		<id name="vanbanId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="kihieu" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="trichyeu" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ngaybanhanh" type="org.hibernate.type.TimestampType" />
+		<property name="ngaytao" type="org.hibernate.type.TimestampType" />
+		<property name="nguoikiID" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userID" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="loaiID" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="noiBHID" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="tinhtrang" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+</hibernate-mapping>

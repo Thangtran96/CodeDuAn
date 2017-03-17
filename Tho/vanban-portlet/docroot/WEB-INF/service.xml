@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.vanban">
+	<author>nguye</author>
+	<namespace>vanban</namespace>
+
+	<entity name="vanban" local-service="true" remote-service="true">
+
+		<column name="vanbanId" type="long" primary="true" />
+		<column name="kihieu" type="String" />
+		<column name="trichyeu" type="String" />
+		<column name="ngaybanhanh" type="Date" />
+		<column name="ngaytao" type="Date" />
+		<column name="nguoikiID" type="long" />
+		<column name="userID" type="long" />
+		<column name="loaiID" type="long" />
+		<column name="noiBHID" type="long" />
+		<column name="tinhtrang" type="boolean"></column>
+
+
+
+
+		<!-- PK fields -->
+
+		<!-- Group instance -->
+
+		<!-- Audit fields -->
+	</entity>
+
+	<entity name="LoaiVB" local-service="true" remote-service="true">
+
+		<column name="loaiId" type="long" primary="true"  />		
+		<column name="tenloai" type="String" />
+		<column name="ghichu" type="String" />
+		<column name="tinhtrang" type="boolean"></column>
+	</entity>
+	
+	<entity name="noiBanHanh" local-service="true" remote-service="true">
+
+		<column name="noiBHId" type="long" primary="true" />		
+		<column name="tennoibanhanh" type="String" />
+		<column name="ghichu" type="String" />
+		<column name="tinhtrang" type="boolean"></column>
+	</entity>
+	
+	<entity name="nguoidung" local-service="true" remote-service="true">
+
+		<column name="userId" type="long" primary="true"  />
+		<column name="hoten" type="String" />
+		<column name="ngaysinh" type="Date" />
+		<column name="gioitinh" type="int" />
+		<column name="diachi" type="String" />
+		<column name="sdt" type="String" />
+		<column name="donvi" type="String" />
+		<column name="mail" type="String" />
+		<column name="matkhau" type="String" />
+		<column name="tinhtrang" type="boolean"></column>
+
+	</entity>
+	
+	<entity name="nguoiki" local-service="true" remote-service="true">
+
+		<column name="nguoikiID" type="long" primary="true" />	
+		<column name="hoten" type="String" />
+		<column name="ngaysinh" type="Date" />
+		<column name="gioitinh" type="int" />
+		<column name="donvi" type="String" />
+		<column name="chucvu" type="String"></column>
+		<column name="tinhtrang" type="boolean"></column>
+
+	</entity>
+</service-builder>

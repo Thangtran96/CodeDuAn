@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.vanban.service.LoaiVBLocalService" class="com.vanban.service.impl.LoaiVBLocalServiceImpl" />
+	<bean id="com.vanban.service.LoaiVBService" class="com.vanban.service.impl.LoaiVBServiceImpl" />
+	<bean id="com.vanban.service.persistence.LoaiVBPersistence" class="com.vanban.service.persistence.LoaiVBPersistenceImpl" parent="basePersistence" />
+	<bean id="com.vanban.service.nguoidungLocalService" class="com.vanban.service.impl.nguoidungLocalServiceImpl" />
+	<bean id="com.vanban.service.nguoidungService" class="com.vanban.service.impl.nguoidungServiceImpl" />
+	<bean id="com.vanban.service.persistence.nguoidungPersistence" class="com.vanban.service.persistence.nguoidungPersistenceImpl" parent="basePersistence" />
+	<bean id="com.vanban.service.nguoikiLocalService" class="com.vanban.service.impl.nguoikiLocalServiceImpl" />
+	<bean id="com.vanban.service.nguoikiService" class="com.vanban.service.impl.nguoikiServiceImpl" />
+	<bean id="com.vanban.service.persistence.nguoikiPersistence" class="com.vanban.service.persistence.nguoikiPersistenceImpl" parent="basePersistence" />
+	<bean id="com.vanban.service.noiBanHanhLocalService" class="com.vanban.service.impl.noiBanHanhLocalServiceImpl" />
+	<bean id="com.vanban.service.noiBanHanhService" class="com.vanban.service.impl.noiBanHanhServiceImpl" />
+	<bean id="com.vanban.service.persistence.noiBanHanhPersistence" class="com.vanban.service.persistence.noiBanHanhPersistenceImpl" parent="basePersistence" />
+	<bean id="com.vanban.service.vanbanLocalService" class="com.vanban.service.impl.vanbanLocalServiceImpl" />
+	<bean id="com.vanban.service.vanbanService" class="com.vanban.service.impl.vanbanServiceImpl" />
+	<bean id="com.vanban.service.persistence.vanbanPersistence" class="com.vanban.service.persistence.vanbanPersistenceImpl" parent="basePersistence" />
+</beans>

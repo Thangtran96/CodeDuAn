@@ -1,0 +1,21 @@
+.table_search {
+  margin-top: 5px;
+  margin-left: 5px;
+  padding-top: 5px;
+  padding-left: 5px; }
+
+.border {
+  border-bottom: 1px solid blue; }
+
+.tdborder td, th {
+  border: 2px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  text-align: center; }
+
+.header a {
+  background-color: #50a2f5;
+  text-decoration: none;
+  padding: 8px;
+  /*  float-right:0px*/ }
+

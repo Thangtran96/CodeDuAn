@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.vanban.model.LoaiVB">
+		<field name="loaiId" type="long" />
+		<field name="tenloai" type="String" />
+		<field name="ghichu" type="String" />
+		<field name="tinhtrang" type="boolean" />
+	</model>
+	<model name="com.vanban.model.nguoidung">
+		<field name="userId" type="long" />
+		<field name="hoten" type="String" />
+		<field name="ngaysinh" type="Date" />
+		<field name="gioitinh" type="int" />
+		<field name="diachi" type="String" />
+		<field name="sdt" type="String" />
+		<field name="donvi" type="String" />
+		<field name="mail" type="String" />
+		<field name="matkhau" type="String" />
+		<field name="tinhtrang" type="boolean" />
+	</model>
+	<model name="com.vanban.model.nguoiki">
+		<field name="nguoikiID" type="long" />
+		<field name="hoten" type="String" />
+		<field name="ngaysinh" type="Date" />
+		<field name="gioitinh" type="int" />
+		<field name="donvi" type="String" />
+		<field name="chucvu" type="String" />
+		<field name="tinhtrang" type="boolean" />
+	</model>
+	<model name="com.vanban.model.noiBanHanh">
+		<field name="noiBHId" type="long" />
+		<field name="tennoibanhanh" type="String" />
+		<field name="ghichu" type="String" />
+		<field name="tinhtrang" type="boolean" />
+	</model>
+	<model name="com.vanban.model.vanban">
+		<field name="vanbanId" type="long" />
+		<field name="kihieu" type="String" />
+		<field name="trichyeu" type="String" />
+		<field name="ngaybanhanh" type="Date" />
+		<field name="ngaytao" type="Date" />
+		<field name="nguoikiID" type="long" />
+		<field name="userID" type="long" />
+		<field name="loaiID" type="long" />
+		<field name="noiBHID" type="long" />
+		<field name="tinhtrang" type="boolean" />
+	</model>
+</model-hints>
